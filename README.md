@@ -11,18 +11,19 @@ Oftentimes, not all screws are properly tightened, especially on cheap printers 
 the belts should be tight, but not so tight that it causes a lot of stress on the motors.
 
 ## 4. Calibrate extruder motor (e-steps)
-** You might need to preheat the nozzle before the printer allows you to extrude. Be aware, the nozzle gets very hot during that process, dont place it on flammable area. It is best to leave the hotend mounted and unmount the extruder instead or remove the bowden tubing. Some printers/custom firmware will allow you to set the minimum extrusion temperature. I set mine to 20°c.
-4.1 Remove the connection between extruder and hotend. If you have a Bowden style extruder, remove the bowden tube at the hotend side. If you have a direct drive extruder, either dismount the extruder or the hotend.
-4.2 Feed some Filament though the extruder. Cur it flush with the exit hole of the extruder.
-4.3 To make sure values are not totally off, set a manual extrusion to 10mm (or use the `e-steps 10mm.gcode`). Check if the filament is carried into the direction of the hotend. It might be quite slow..
-4.4 Cut the filament flush again on the exit hole of the extruder. Now measure the length of the Filament.  
-Use the following formula, to calculate the correct e-steps: `e-Steps = 10mm / (actual mm * current e-steps)`. (or use the calculation excel sheet in How-Tos Documents and tools)
-4.5 Set the newly calculated e-steps in the firmware and dont forget to save them.
-4.6 With a caliper, measure 100mm (10cm) in front of the extruder, try to measure them as precisely as possible and mark the filament with a marker at that position as precisely as possible.
-4.7 Print/"Execute" the `e-steps 100mm.gcode` file. The marker on the filament should now be close to the extruder intake.
-4.8 Use the electronic adjustment to feed the filament further in or pull it back until the mark lines up with the extruder intake. Take note hof how many MM the filament got pulled in too much or too little (if you have to add 1.5 mm to set it flush, the extruded length was 98.5 for example. If you had to take back the filament by 1mm, it extruded 101mm.
-4.9 Calculate the new e-steps with the following formula (or use the 100mm calculator in the excel): `e-Steps = 100mm / (actual mm * current e-steps)`
-5. Set the e-steps in your firmware and save. Repeat the process until you are happy with the result. 
+**You might need to preheat the nozzle before the printer allows you to extrude. Be aware, the nozzle gets very hot during that process, dont place it on flammable area. It is best to leave the hotend mounted and unmount the extruder instead or remove the bowden tubing. Some printers/custom firmware will allow you to set the minimum extrusion temperature. I set mine to 20°c.**  
+
+4.1 Remove the connection between extruder and hotend. If you have a Bowden style extruder, remove the bowden tube at the hotend side. If you have a direct drive extruder, either dismount the extruder or the hotend.  
+4.2 Feed some Filament though the extruder. Cur it flush with the exit hole of the extruder.  
+4.3 To make sure values are not totally off, set a manual extrusion to 10mm (or use the `e-steps 10mm.gcode`). Check if the filament is carried into the direction of the hotend. It might be quite slow..  
+4.4 Cut the filament flush again on the exit hole of the extruder. Now measure the length of the Filament.    
+Use the following formula, to calculate the correct e-steps: `e-Steps = 10mm / (actual mm * current e-steps)`. (or use the calculation excel sheet in How-Tos Documents and tools)  
+4.5 Set the newly calculated e-steps in the firmware and dont forget to save them.  
+4.6 With a caliper, measure 100mm (10cm) in front of the extruder, try to measure them as precisely as possible and mark the filament with a marker at that position as precisely as possible.  
+4.7 Print/"Execute" the `e-steps 100mm.gcode` file. The marker on the filament should now be close to the extruder intake.  
+4.8 Use the electronic adjustment to feed the filament further in or pull it back until the mark lines up with the extruder intake. Take note hof how many MM the filament got pulled in too much or too little (if you have to add 1.5 mm to set it flush, the extruded length was 98.5 for example. If you had to take back the filament by 1mm, it extruded 101mm.  
+4.9 Calculate the new e-steps with the following formula (or use the 100mm calculator in the excel): `e-Steps = 100mm / (actual mm * current e-steps)`  
+5. Set the e-steps in your firmware and save. Repeat the process until you are happy with the result.   
 
 ## 5. Check correct motor movement direction and end-stops
 5.1 by manually moving the axis while the printer is turned off: Make sure that the endstops are actually beeing hit/triggered by the carriages
